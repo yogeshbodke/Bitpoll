@@ -55,7 +55,7 @@ COPY docker_files/uwsgi-bitpoll.ini /etc/uwsgi/bitpoll.ini
 RUN chown $UID -R _static
 RUN chmod o+r -R .
 
-RUN ln -sf /opt/config/settings.py /opt/bitpoll/bitpoll/settings_local.py
+COPY docker_files/config/settings_env.py /opt/bitpoll/bitpoll/settings_local.py
 RUN ln -sf /opt/storage/media /opt/bitpoll/_media
 
 ARG RELEASE_VERSION=2026.05.20
