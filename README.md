@@ -19,17 +19,17 @@ https://bitpoll.de
 
 ### Poll Creation Panel
 
-![Poll Creation Step 1](img/creation-1.png)
-![Poll Creation Step 2](img/creation-2.png)
-![Poll Creation Step 3](img/creation-3.png)
+
+
+
 
 ### Voting View
 
-![Voting View](img/voting.png)
+
 
 ### Poll Results
 
-![Poll Results](img/results.png)
+
 
 ## Installation
 

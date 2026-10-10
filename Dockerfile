@@ -35,6 +35,10 @@ RUN npm install cssmin uglify-js -g
 COPY manage.py .
 COPY bitpoll bitpoll
 COPY locale locale
+# The emoji font is too large for the upload limit, so fetch it at build time (pinned by hash).
+RUN curl -fsSL -o bitpoll/base/static/fonts/NotoColorEmoji.ttf \
+    https://raw.githubusercontent.com/fsinfuhh/Bitpoll/c5c692e2d6dd0f6b61c4efd9a0aa9e5f9f58b697/bitpoll/base/static/fonts/NotoColorEmoji.ttf && \
+    echo "5911ad9f76002995c081d3cd27c4bcf8191166d6fce3e4e61b21b70d61b02ad2  bitpoll/base/static/fonts/NotoColorEmoji.ttf" | sha256sum -c -
 COPY docker_files/config/settings.py bitpoll/settings_local.py
 
 # Dependencies are installed in /opt/bitpoll/.venv by uv in the previous stage.
