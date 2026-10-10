@@ -67,7 +67,6 @@ RUN echo $RELEASE_VERSION > /opt/bitpoll/.releaseversion
 
 ENV LANG=C.UTF-8
 EXPOSE 3008/tcp
-EXPOSE 3009/tcp
 VOLUME /opt/static
 VOLUME /opt/config
 VOLUME /opt/log
